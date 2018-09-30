@@ -6,6 +6,7 @@ body {
 	font-family: 'Arial';
 	background-color: lightgrey;
 }
+/* tekst informujący gracza że musi wcisnąć przycisk NEW GAME w celu ustalenia liczby rund niezbędncyh do wygrania całej gry */
 #start {
 	text-align: center;
 	font-size: 30px;
@@ -13,18 +14,36 @@ body {
 	margin: 0 auto;
 	padding: 10px;
 }
+/*style dla guzika NEW GAME */
 #newGame {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
 	margin: 0 auto;
-}
-#roundToWin {
-	font-size: 25px;
-	font-weight: bold;
+
+	button {	
+		padding: 0 10px;
+		border: 2px solid #182C61;
+		border-radius: 15px;
+		background-color: #3B3B98;
+		width: 200px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	#toWin {
+		font-size: 25px;
+		#roundToWin {
+			font-size: 25px;
+			font-weight: bold;
+		}
+	}
 }
 
+/* style dla tablicy z guzikami, w które klika gracz */
 .playground {
 	margin: 10px;
 	padding: 10px;
@@ -32,78 +51,140 @@ body {
 	width: 100%;
 	height: auto;
 	text-align: center;
+	h3 {
+		padding: 0;
+	}
+	/* style dla guzików, w które klika gracz */	
+	button {
+		display: inline-block;
+		margin: 20px 20px;
+		padding: 0 10px;
+		border: 2px solid #182C61;
+		border-radius: 15px;
+		background-color: #3B3B98;
+		width: 200px;
+		height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+		text-transform:	 uppercase;
+	}
+	/* style dla tekstu informującego o wyborze komputera U*/
+	#computerChoice {
+		font-size: 20px;
+		text-transform: uppercase;
+		text-align: center;
+	}
 }
-
-h3 {
-	padding: 0;
-}
-#computerChoice {
-	font-size: 20px;
-	text-transform: uppercase;
-	text-align: center;
-}
-	
-button {
-	display: inline-block;
-	margin: 20px 20px;
-	padding: 0 10px;
-	border: 2px solid #182C61;
-	border-radius: 15px;
-	background-color: #3B3B98;
-	width: 200px;
-	height: 50px;
-	font-size: 20px;
-	font-weight: bold;
-	text-transform:	 uppercase;
-}
+/* style dla tablicy, w której wyświetlają się punkty zdobyte przez graczy */
 .gameResult {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: space-around;
+
+	#result {
+		margin: 0 auto;
+		padding: 0 10px;
+		border: 2px solid #182C61;
+		border-radius: 15px;
+		background-color: #3B3B98;
+		width: 500px;
+		height: 250px;
+		font-size: 20px;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	.resultInfo {
+		margin: 0 auto;
+		width: 500px;
+		height: 250px;
+		border: 2px solid #F97F51;
+		background-color: #1B9CFC;
+		border-radius: 25px;
+		#output {
+			font-size: 30px;
+			text-align: center;
+			line-height: 50px;
+			padding: 50px 0;
+		}
+	}
 }
 
-.resultInfo {
-	margin: 0 auto;
-	width: 500px;
-	height: 250px;
-	border: 2px solid #F97F51;
-	background-color: #1B9CFC;
-	border-radius: 25px;
+/* style dla modali */
+.overlay_one {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);	
 	
+
+	#modal_one {
+		margin: 0 auto;
+		width: 700px;
+		height: auto;
+		background: #fff;
+		border-radius: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		.close_modal_one {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding: 10px;
+			color: #000;
+			text-decoration: none;
+			font-size: 20px;
+		}		
+		header {
+			font-size: 20px;
+			line-height: 30px;
+			min-height: 30px;
+			font-weight: bold;
+			padding: 10px 30px;
+		}
+		.whoWin {
+			text-align: center;
+			font-weight: bold;
+		}
+		.final_Output {
+			min-height: 30px;
+			padding: 5px 30px;
+		}
+	}
 }
-#output {
-	font-size: 30px;
-	text-align: center;
-	line-height: 50px;
-	padding: 50px 0;
+
+.show {
+	display: block;
 }
-#result {
-	margin: 0 auto;
-	padding: 0 10px;
-	border: 2px solid #182C61;
-	border-radius: 15px;
-	background-color: #3B3B98;
-	width: 500px;
-	height: 250px;
-	font-size: 20px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
+
+table {
+    border: none;
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: separate;
+
+	th {
+   		width: 25%;
+   		background-color: rgb(254, 204, 1);
+   		font-weight: bold;
+   		font-size: 16px;
+  		text-align: center;
+	}
+	td {
+   		width: 25%;
+   		background-color: rgb(254,254,166);
+   		font-size: 16px;
+   		text-align: center;
+	}
 }
-#newGame {
-	margin: 0 auto;
-}
-#newGame button {	
-	padding: 0 10px;
-	border: 2px solid #182C61;
-	border-radius: 15px;
-	background-color: #3B3B98;
-	width: 200px;
-	height: 50px;
-	font-size: 20px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-}
+
+
+
+	

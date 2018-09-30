@@ -1,0 +1,55 @@
+@charset "UTF-8";
+* { box-sizing: border-box; }
+
+body { margin: 0 auto; font-family: 'Arial'; background-color: lightgrey; }
+
+/* tekst informujący gracza że musi wcisnąć przycisk NEW GAME w celu ustalenia liczby rund niezbędncyh do wygrania całej gry */
+#start { text-align: center; font-size: 30px; font-weight: bold; margin: 0 auto; padding: 10px; }
+
+/*style dla guzika NEW GAME */
+#newGame { display: -ms-flexbox; display: flex; -ms-flex-flow: column; flex-flow: column; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; margin: 0 auto; }
+
+#newGame button { padding: 0 10px; border: 2px solid #182C61; border-radius: 15px; background-color: #3B3B98; width: 200px; height: 50px; font-size: 20px; font-weight: bold; text-transform: uppercase; text-align: center; }
+
+#newGame #toWin { font-size: 25px; }
+
+#newGame #toWin #roundToWin { font-size: 25px; font-weight: bold; }
+
+/* style dla tablicy z guzikami, w które klika gracz */
+.playground { margin: 10px; padding: 10px; background-color: #B33771; width: 100%; height: auto; text-align: center; /* style dla guzików, w które klika gracz */ /* style dla tekstu informującego o wyborze komputera U*/ }
+
+.playground h3 { padding: 0; }
+
+.playground button { display: inline-block; margin: 20px 20px; padding: 0 10px; border: 2px solid #182C61; border-radius: 15px; background-color: #3B3B98; width: 200px; height: 50px; font-size: 20px; font-weight: bold; text-transform: uppercase; }
+
+.playground #computerChoice { font-size: 20px; text-transform: uppercase; text-align: center; }
+
+/* style dla tablicy, w której wyświetlają się punkty zdobyte przez graczy */
+.gameResult { display: -ms-flexbox; display: flex; -ms-flex-flow: row nowrap; flex-flow: row nowrap; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: distribute; align-content: space-around; }
+
+.gameResult #result { margin: 0 auto; padding: 0 10px; border: 2px solid #182C61; border-radius: 15px; background-color: #3B3B98; width: 500px; height: 250px; font-size: 20px; font-weight: bold; text-transform: uppercase; text-align: center; }
+
+.gameResult .resultInfo { margin: 0 auto; width: 500px; height: 250px; border: 2px solid #F97F51; background-color: #1B9CFC; border-radius: 25px; }
+
+.gameResult .resultInfo #output { font-size: 30px; text-align: center; line-height: 50px; padding: 50px 0; }
+
+/* style dla modali */
+.overlay_one { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); }
+
+.overlay_one #modal_one { margin: 0 auto; width: 700px; height: auto; background: #fff; border-radius: 25px; position: absolute; top: 50%; left: 50%; transform: translate3d(-50%, -50%, 0); }
+
+.overlay_one #modal_one .close_modal_one { position: absolute; right: 0; top: 0; padding: 10px; color: #000; text-decoration: none; font-size: 20px; }
+
+.overlay_one #modal_one header { font-size: 20px; line-height: 30px; min-height: 30px; font-weight: bold; padding: 10px 30px; }
+
+.overlay_one #modal_one .whoWin { text-align: center; font-weight: bold; }
+
+.overlay_one #modal_one .final_Output { min-height: 30px; padding: 5px 30px; }
+
+.show { display: block; }
+
+table { border: none; width: 90%; margin: 0 auto; border-collapse: separate; }
+
+table th { width: 25%; background-color: #fecc01; font-weight: bold; font-size: 16px; text-align: center; }
+
+table td { width: 25%; background-color: #fefea6; font-size: 16px; text-align: center; }
