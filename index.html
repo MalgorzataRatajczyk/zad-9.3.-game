@@ -3,50 +3,51 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>zad8.4-paper_stone_scissors_game</title>
-  
-  
-  
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <title>zad.9.3-paper_stone_scissors_game</title>
+  <link rel="stylesheet" href="css/style.css"> 
 </head>
-
 <body>
-
-  <div id="start"></div>
-<div id="newGame">
-		<button id="startGame">New Game</button>
-		<p>To win the entire game you have to win <span id="roundToWin"></span> rounds</p>
-</div>
-<div class="playerChoice playground">
-	<h3>YOUR CHOICE:</h3>
-	<button id="paper" data-move="paper" class="box player-move">papier</button>
-	<button id="stone" data-move="stone" class="box player-move">kamień</button>
-	<button id="scissors" data-move="scissors" class="box player-move">nożyce</button>
-	<h3>COMPUTER CHOICE: </h3>
-	<p id="computerChoice"></p>
-</div>
-<div class="gameResult">
-	<div id="result">
-		<p>SCORE BOARD</p>
-		<p>Your result:</p>
-		<p id="playerWin">0</p>
-		<p>Computer result:</p>
-		<p id="computerWin">0</p>
+	<div id="start"></div>
+	<div id="newGame">
+			<button id="startGame">New Game</button>
+			<p id="toWin">To win the entire game you have to win <span id="roundToWin"></span> rounds</p>
 	</div>
-	<div class="resultInfo">
-		<p id="output"></p>
+	<!-- tablica z guzikami papier, kamień, nożyce w które klika gracz -->
+	<div class="playerChoice playground">
+		<h3>YOUR CHOICE:</h3>
+		<button data-move="paper" id="paperButton" class="player-move">papier</button>
+		<button data-move="stone" id="stoneButton" class="player-move">kamień</button>
+		<button data-move="scissors" id="scissorsButton" class="player-move">nożyce</button>
+		<!-- miejsce gdzie wyświetla się wybór komputera -->
+		<h3>COMPUTER CHOICE: </h3>
+		<p id="computerChoice"></p>
 	</div>
-</div>
-  
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+	<!-- tablice w wynikami gry -->
+	<!-- tablica na której wyświetlają się punkty zdobyte przez graczy -->
+	<div class="gameResult">
+		<div id="result">
+			<p>SCORE BOARD</p>
+			<p>Your result:</p>
+			<p id="playerWin">0</p>
+			<p>Computer result:</p>
+			<p id="computerWin">0</p>
+		</div>
+		<div class="resultInfo">
+			<p id="output"></p>
+		</div>
+	</div>
+	<!-- modale -->	
+	<!-- modal informujący o wyniku całej rundy -->
+	<div class="overlay_one" id="modal_overlay_one">
+		<div class="show_modal_one" id="modal_one">
+			<a href="#" class="close_modal_one">x</a>
+			<header>Wynik gry</header>
+			<p class="whoWin"></p>
+			<div class="final_Output">
+					
+			</div>
+		</div>
+	</div>
+<script  src="js/script.js"></script>
 </body>
-
 </html>
