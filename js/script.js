@@ -53,6 +53,7 @@
         params.output.innerHTML = '';
         params.computerChoice.innerHTML = '';
         final_Output.innerHTML = '';
+        params.progress = [];
     }
 
     // funkcja losująca liczbę z zakresu 1 do 3
